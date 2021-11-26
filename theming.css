@@ -1,10 +1,16 @@
+/*--------------------------------------------------------------------------------------------
+
+                              Identified Issues are tracked here
+    https://github.com/wso2-enterprise/asgardeo-product/issues/8268#issuecomment-972592736
+
+---------------------------------------------------------------------------------------------*/
+
 :root {
-    --primaryColor: #a760e6;
-    --primaryColorDarker: #612b91;
-    --backgroundColor: #bc87eb;
-    --accentColor: #a700c9;
-    --borderColor: #4c2b50;
-    --buttonTextColor: #fefefe;
+    --primaryColor: #20b6b0;
+    --primaryColorDarker: #197a76;
+    --backgroundColor: #f7f8fb;
+    --accentColor: #57595d;
+    --borderColor: #ebebeb;
 }
 
 /*-----------------------------
@@ -18,27 +24,14 @@
 
 /* Default Page with Blurred Patch */
 .login-portal.layout .page-wrapper {
-    background-attachment: fixed;
-    background-clip: content-box;
-    background-repeat: no-repeat;
-    background-position: left;
-    background-image: url(https://images.app.goo.gl/3qwirNsxByoZrdkw6), radial-gradient(at 80% 80%, #fafafa,var(--primaryColor));
+    background: rgba(1,6,56,0);
+    background: linear-gradient(180deg,rgba(1,6,56,0), var(--backgroundColor));
+    background-image: url(https://github.com/ShanikaWickramasinghe/test-resources/blob/main/fashionbug.png), radial-gradient(at 80% 80%, #fafafa,var(--primaryColor));
 }
 
 /* Error Page with Blurred Patch */
 .login-portal.layout .page-wrapper.error-page {
-    /* background: radial-gradient(circle at 68% 47%,rgba(217,88,88,.21840258) 0%, var(--backgroundColor) 25%, var(--backgroundColor) 100%); */
-    background-attachment: fixed;
-    background-clip: content-box;
-    background-repeat: no-repeat;
-    background-position: left;
-    background-image: url(https://images.app.goo.gl/3qwirNsxByoZrdkw6), radial-gradient(at 80% 80%, #fafafa,var(--primaryColor));
-}
-
-/* Right Aligned Page with Blurred Patch - Shown in password recovery success */
-.login-portal.layout .page-wrapper.right-aligned {
-    background: radial-gradient(circle at 72% 47%,rgba(243,115,33,.13836485) 0,var(--backgroundColor) 25%, var(--backgroundColor) 100%);
-                radial-gradient(circle at 72% 47%,rgba(144,37,142,.10433123) 0,rgba(245,246,246,.08559174) 27%,rgba(245,246,246,1) 100%);
+    background: radial-gradient(circle at 68% 47%,rgba(217,88,88,.21840258) 0%, var(--backgroundColor) 25%, var(--backgroundColor) 100%);
 }
 
 /* Success Page with Blurred Patch */
@@ -46,15 +39,21 @@
     background: radial-gradient(circle at 70% 47%, rgba(0,167,157,0.1852182262569832) 0%, var(--backgroundColor) 25%, var(--backgroundColor) 100%);
 }
 
+/* Logo */
+.login-portal.layout .center-segment .portal-logo img {
+    margin-bottom: 1em;
+    max-width: 160px;
+}
+
 /* Buttons */
 .ui.primary.button {
     background: var(--primaryColor) !important;
-    color: var(--buttonTextColor) !important;
+    color: var(--backgroundColor) !important;
 }
 
 .login-portal.layout .segment-form .ui.large.fluid.button.link-button {
     background: transparent;
-    color: var(--backgroundColor);
+    color: var(--accentColor);
 }
 
 /* Login Box */
@@ -96,14 +95,4 @@ a:hover {
 /* Remove the margin in success page heading */
 .login-portal.layout .page-wrapper.success-page .slogan-container .slogan-message {
     margin-top: 10px;
-}
-
-
-.login-portal.layout .footer .ui.text.menu .item {
-    color: #231224;
-}
-
-.ui.form .field.field input:-webkit-autofill {
-    box-shadow: 0 0 0 100px ivory inset!important;
-    border-color: #d7a1e5!important;
 }
